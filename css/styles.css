@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+h1 {
+    font-size: 24px;
+    color: rgb(180, 17, 17);
+    text-align: left;
+}
+.container {
+    display: grid;
+    grid-template: 80px 1fr / 100px 1fr;
+    grid-template-areas: "header header" "menus cards";
+}
+.div1 {
+    grid-area: header;
+}
+.div2 {
+    grid-area: menus;
+}
+.div3 {
+    grid-area: cards;
+}
+.header {
+    background: white;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 50px 100px 1fr 180px 80px 50px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+.menu1 {
+    position: relative;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    justify-items: center;
+}
+.profile-image {
+    width: 40px;
+}
+.menu1 form input {
+    margin: 0;
+    width: 80%;
+    font-size: 16px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.icon-image {
+    width: 35px;
+    /* padding-right: 0; */
+}
+.menu1 p {
+    font-weight: bold;
+}
+.menu-container {
+    /* background: linear-gradient(to right, rgb(236, 102, 102) 85%,  rgb(231, 152, 152)); */
+    /* background: rgb(236, 102, 102); */
+    background: linear-gradient(90deg, rgba(237,21,15,1) 0%, rgba(246,73,15,1) 35%, rgba(241,127,11,1) 100%);
+    height: 88vh;
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 240px 1fr;
+    position: fixed;
+    left: 0;
+    z-index: 3;
+}
+.access ul {
+    list-style: none;
+    padding: 0;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-rows: repeat(3, 80px);
+    margin: 0;
+}
+.access ul li {
+    /* border: 1px solid blue; */
+    display: inline-block;
+    text-align: center;
+    padding: 30px 0;
+}
+.settings {
+    /* border: 1px solid red; */
+    padding-top: 260px;
+}
+.menu-container a {
+    width: 100%;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+}
+.settings a {
+    display: inline-block;
+    text-align: center;
+}
+.cards-container figure {
+    width: 100%;
+    /* align-content: center; */
+    margin: 0;
+}
+.card-image {
+    /* width: 200px; */
+    width: 100%;
+    /* vertical-align: top; */
+    /* box-sizing: border-box; */
+    /* height: 50%; */
+    /* object-fit: cover; */
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: 50px 350px 50px 350px 50px 350px;
+    justify-content: center;
+    grid-template-areas: "info1 info1 info1"
+                         "card1 card2 card3"
+                         "info2 info2 info2"
+                         "card4 card5 card6"
+                         "info3 info3 info3"
+                         "card7 card8 card9";
+    gap: 25px;
+    margin-top: 20px;
+    /* overflow: hidden; */
+    margin-bottom: 20px;
+}
+.cards-container {
+    position: relative;
+    display: block;
+    /* background: lightgoldenrodyellow; */
+    padding: 0;
+    overflow: hidden;
+}
+.cards-container h3 {
+    padding: 10px;
+    margin: 0;
+}
+.cards-container p {
+    padding: 10px;
+    margin: 0;
+}
+.cardF {
+    background: rgba(75, 25, 6, 0.6);
+    /* background: darkblue; */
+    padding: 0 25px;
+    margin-top: 0px;
+    /* width: 100%; */
+    /* align-content: center; */
+    position: relative;
+    text-align: center;
+    color: white;
+    /* display: none; */
+    /* overflow: hidden; */
+    transform: translateY(200px);
+    transition-duration: 1s;
+
+}
+.cardF p {
+    text-align: justify;
+    padding-bottom: 0;
+}
+.cards-container:hover .cardF {
+    /* display: block; */
+    transform: translateY(-200px);
+    transition-duration: 500ms;
+}
+.card-info1 {
+    grid-area: info1;
+}
+.card-info2 {
+    grid-area: info2;
+}
+.card-info3 {
+    grid-area: info3;
+}
+#card1 {
+    grid-area: card1;
+}
+#card2 {
+    grid-area: card2;
+}
+#card3 {
+    grid-area: card3;
+}
+#card4 {
+    grid-area: card4;
+}
+#card5 {
+    grid-area: card5;
+}
+#card6 {
+    grid-area: card6;
+}
+#card7 {
+    grid-area: card7;
+}
+#card8 {
+    grid-area: card8;
+}
+#card9 {
+    grid-area: card9;
+}
+.iconHome {
+    width: 30px;
+    /* color: white; */
+}
+.iconTrending {
+    width: 30px;
+}
+.iconLikes {
+    width: 35px;
+}
+.iconConfig {
+    width: 35px;
+    padding-left: 33px;
+}
+.iconControl {
+    width: 25px;
+}
